@@ -1,0 +1,150 @@
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .top{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #D4B300;
+        min-height: 50px;
+        .logo{
+            font-weight: 700;
+            font-size: 1em;
+            text-transform: uppercase;
+            color: black;
+        }
+        nav{
+            .burger{
+                display: block;
+                position:absolute;
+                right: 15px;
+                top:5px;
+                width: 38px;
+                height: 38px;
+                content: ' ';
+                z-index: 50;
+                cursor: pointer;
+                span{
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 38px;
+                    height: 3px;
+                    background-color: black;
+                     &::before, &::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: 38px;
+                        height: 3px;
+                        left: 0;
+                    }
+                    &::before {
+                        background-color:black;
+                        top: -15px;
+                    }
+
+                    &::after {
+                        background-color: black;
+                        bottom: -15px;
+                    }
+                    
+                }
+                &.active{
+                    &:hover{
+                        span::before, span::after {
+                            transition: 0.3s all;
+                            background-color: #2E2E2E; 
+                        }
+                    }
+                    span{
+                        background-color: transparent;
+                        &::before{
+                            top: 0;
+                            transform: rotate(45deg); 
+                            background-color: white;
+                        }
+                        &::after {
+                            bottom: 0;
+                            transform: rotate(-45deg);
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+            ul{
+                display:none;
+                position: absolute;
+                text-decoration: none;
+                margin: 0px;
+                padding: 0px;
+                width: 100%;
+                height: auto;
+                top:0px;
+                left:0px;
+                right: 0px;
+                bottom: 0px;
+                background-color: #d4b400e7;
+                z-index: 5;
+                padding-top: 50px;
+                list-style: none;
+                &.active {
+                    display: block; /* Показываем меню, когда родителю задан класс active */
+                }
+                li{
+                    margin: 0px;
+                    padding: 3px;
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                        font-size: 16px;
+                        transition: 0.3s all;
+                        &:hover{
+                            transition: 0.3s all;
+                            color:#2E2E2E;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .heaedr{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: linear-gradient(to bottom, #D4B300, #ffffff);
+        align-items: center;
+        .title{
+            font-size: 1.3em;
+            color: #000000;
+            font-weight: 800;
+            padding: 25px;
+            text-align: center;
+        }
+        .description{
+            text-align: center;
+            font-size: 1em;
+            padding: 25px;
+        }
+    }
+    .section{
+        display: flex;
+        justify-content: space-around;
+        button{
+            background-color: #7B0093;
+            color: #ffffff;
+            padding: 8px;
+            min-width: 140px;
+            outline: none;
+            border: none;
+            &:hover{
+                cursor: pointer;
+                transition: 0.3s all;
+                background-color: #8b419a;
+            }
+        }
+    }
+}

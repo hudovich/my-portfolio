@@ -1,0 +1,33 @@
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 220px;
+    background-color: #E0F4DD;
+    margin-bottom: 20px;
+    .images{
+        display: flex;
+        margin: 10px;
+        background-color: #fff;
+        width: 200px;
+        height: 200px;
+    }
+    .title{
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    ul{
+        display: flex;
+        justify-content: space-around;
+        li{
+            display: inline-block;
+            margin: 5px;
+            min-width: 70px;
+            text-align: center;
+            border-radius: 5px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+    }
+}
