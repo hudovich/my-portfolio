@@ -27,4 +27,6 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
+#header,#portfolio,#skill,#about {
+        scroll-margin-top: 50px; 
+}

@@ -152,7 +152,6 @@ header{
         }
     }
 }
-
 @media (min-width: 750px) {
     header {
         .top{
@@ -160,6 +159,7 @@ header{
             position: fixed;
             top: 0px;
             width: 100%;
+            z-index: 1;
             nav {
                 .burger{
                     display: none;
