@@ -1,0 +1,33 @@
+@property --progress {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
+.circular {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 30px;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+  background: conic-gradient(from 90deg, #0082C2 0% var(--progress), transparent var(--progress) 100%);
+  
+  animation: fillCircle 1s cubic-bezier(0.4, 0, 0.2, 0.5) forwards;
+  
+  timeline-trigger: --circle-trigger view();
+  animation-trigger: --circle-trigger play-forwards;
+  animation-range: entry 5%;
+  animation-delay: calc((var(--i) * 0.2s) + 0.2s);
+}
+
+@keyframes fillCircle {
+  to {
+    --progress: var(--target-percent);
+  }
+}

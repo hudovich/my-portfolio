@@ -17,7 +17,7 @@ header{
         nav{
             .burger{
                 display: block;
-                position:absolute;
+                position:relative;
                 right: 15px;
                 top:5px;
                 width: 38px;
@@ -55,8 +55,7 @@ header{
                 }
                 &.active{
                     &:hover{
-                        span::before, span::after {
-                            transition: 0.3s all;
+                        span::before, span::after {                         
                             background-color: #2E2E2E; 
                         }
                     }
@@ -92,7 +91,9 @@ header{
                 padding-top: 50px;
                 list-style: none;
                 &.active {
-                    display: block; /* Показываем меню, когда родителю задан класс active */
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                 }
                 li{
                     margin: 0px;
@@ -133,7 +134,10 @@ header{
     .section{
         display: flex;
         justify-content: space-around;
-        button{
+        .button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-color: #7B0093;
             color: #ffffff;
             padding: 8px;
@@ -145,6 +149,53 @@ header{
                 transition: 0.3s all;
                 background-color: #8b419a;
             }
+        }
+    }
+}
+
+@media (min-width: 750px) {
+    header {
+        .top{
+            display: flex;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            nav {
+                .burger{
+                    display: none;
+                }
+                ul{
+                    display: flex;
+                    position: relative;
+                    background-color: none;
+                    padding-top: 0px;
+                    &.active {
+                        display: flex;
+                        position: relative;
+                        flex-direction: row;
+                        background-color: none;
+                        padding-top: 0px;
+                    }
+                    li{
+                        a{
+                            color: #000;
+                            margin-left: 5px;
+                            &:hover{
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .heaedr{
+            margin-top: 50px;
+            padding: 50px;
+        }
+        .section{
+            display: flex;
+            justify-content: space-around;
+            padding: 0px 20%;
         }
     }
 }

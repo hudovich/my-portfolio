@@ -9,6 +9,9 @@ body {
     min-height: 100vh;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    min-width: 320px;
 }
 ul, ol {
     list-style: none;
@@ -24,3 +27,4 @@ a {
     text-decoration: none;
     color: inherit;
 }
+

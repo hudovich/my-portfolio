@@ -56,19 +56,23 @@ let Home = () => {
                         </div>
                     </div>
                     <div className={s.section}>
-                        <button>Смотреть проекты</button>
-                        <button>Связаться</button>
+                        {/* <button>Смотреть проекты</button> */}
+                        <HashLink smooth to="/#contact" className={s.button}>Связаться</HashLink>
                     </div>
                 </header>
                 <Title id="portfolio" text="Портфолио"/>
                 <Section>
-                    <ProductCart images='hi' title="Названия" link="/" skill={['react', 'js']}/>
+                    <ProductCart index = '1' images='hi' title="Названия" link="/" skill={['react', 'js']}/>
+                    <ProductCart index = '2' images='hi' title="Названия" link="/" skill={['react', 'js']}/>
+                    <ProductCart index = '3' images='hi' title="Названия" link="/" skill={['react', 'js']}/>
+                    <ProductCart index = '4' images='hi' title="Названия" link="/" skill={['react', 'js']}/>
                 </Section>
                 <Title id="skill" text="Skill"/>
                 <Section>
                     {skill.map((item)=>(
                         <SkillCart 
-                            key={item.id} 
+                            key={item.id}
+                            index={item.id} 
                             name={item.name} 
                             proggres={item.proggres} 
                             bgcolor={item.bgcolor}
