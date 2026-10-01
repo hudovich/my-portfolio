@@ -13,6 +13,12 @@ let Home = () => {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     }
+    const project = [
+        {id:'1', images:'hi', title:'Названия', link:"/", skill:['react', 'js', 'figma']},
+        {id:'2', images:'hi', title:'Названия', link:"/", skill:['react', 'js', 'figma']},
+        {id:'3', images:'hi', title:'Названия', link:"/", skill:['react', 'js', 'figma']},
+        {id:'4', images:'hi', title:'Названия', link:"/", skill:['react', 'js', 'figma']},
+    ];
     const skill = [
         {id:'1', name:'react', proggres:'78', bgcolor:'#291A7D'},
         {id:'2', name:'redux', proggres:'85', bgcolor:'#741F93'},
@@ -62,10 +68,17 @@ let Home = () => {
                 </header>
                 <Title id="portfolio" text="Портфолио"/>
                 <Section>
-                    <ProductCart index = '1' images='hi' title="Названия" link="/" skill={['react', 'js']}/>
-                    <ProductCart index = '2' images='hi' title="Названия" link="/" skill={['react', 'js']}/>
-                    <ProductCart index = '3' images='hi' title="Названия" link="/" skill={['react', 'js']}/>
-                    <ProductCart index = '4' images='hi' title="Названия" link="/" skill={['react', 'js']}/>
+                    {project.map((item)=>{
+                        return(
+                            <ProductCart 
+                                index = {item.id} 
+                                images={item.images} 
+                                title={item.title} 
+                                link={item.link} 
+                                skill={item.skill}
+                            />
+                        );
+                    })}
                 </Section>
                 <Title id="skill" text="Skill"/>
                 <Section>

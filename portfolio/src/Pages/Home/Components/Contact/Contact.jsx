@@ -13,9 +13,8 @@ let Contact = () => {
                     <p>Telefon:<a href="tel:+48534706146">+48 534-706-146</a></p>
                 </div>
                 <div className={s.icons}>
-                    <a href=""><img src={icon1} alt=' ' style={{width:'50px', height:'50px'}} /></a>
-                    <a href=""><img src={icon2} alt=' ' style={{width:'50px', height:'50px'}} /></a>
-                    <a href=""><img src={icon3} alt=' ' style={{width:'50px', height:'50px'}} /></a>
+                    <a href="https://wa.me/48534706146" target="_blank"><img src={icon1} alt=' ' style={{width:'50px', height:'50px'}} /></a>
+                    <a href="https://t.me/sikret95" target="_blank"><img src={icon3} alt=' ' style={{width:'50px', height:'50px', marginLeft:'20px'}} /></a>
                 </div>
             </div>
             <p className={s.copy}>© 2026 Crafted by Hudovich</p>
